@@ -1,4 +1,4 @@
-@import url(/style/font.css);
+@import url(font.css);
 
 header {
     display: flex;
@@ -29,7 +29,7 @@ header nav a {
     text-decoration: none;
     color: #56565a;
     font-family: Avenir-Medium;
-    font-size: 1vw;
+    font-size: 1.15vw;
 }
 
 header nav a:hover {

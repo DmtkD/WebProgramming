@@ -1,3 +1,5 @@
+@import url(font.css);
+
 footer {
     display: flex;
     padding: 0 10vw;
