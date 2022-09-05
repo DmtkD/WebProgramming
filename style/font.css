@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Helvetica-Regular";
-    src: url(/assets/font/Helvetica.ttf);
+    src: url(assets/font/Helvetica.ttf);
 }
 
 @font-face {
@@ -10,15 +10,15 @@
 
 @font-face {
     font-family: "Avenir-Bold";
-    src: url(/assets/font/AvenirLTStd-Book.otf);
+    src: url(assets/font/AvenirLTStd-Book.otf);
 }
 
 @font-face {
     font-family: "Avenir-Medium";
-    src: url(/assets/font/Avenir-Medium.otf);
+    src: url(assets/font/Avenir-Medium.otf);
 }
 
 @font-face {
     font-family: "Avenir-Heavy";
-    src: url(/assets/font/Avenir-Heavy.otf);
+    src: url(assets/font/Avenir-Heavy.otf);
 }
