@@ -1,0 +1,36 @@
+@keyframes h1__text {
+
+    0%,
+    100% {
+        color: #212353;
+    }
+
+    25% {
+        color: #5265b5;
+    }
+
+    50% {
+        color: #9c12c3;
+    }
+
+    75% {
+        color: #a9e317
+    }
+}
+
+@keyframes img {
+
+    0%,
+    50%,
+    100% {
+        right: 0px;
+    }
+
+    25% {
+        right: -3.5px
+    }
+
+    75% {
+        right: 3.5px
+    }
+}

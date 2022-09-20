@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Web Laboratory work 1</title>
+    <meta name="author" content="Pavlo Turchynyak">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Laboratory work 2</title>
     <link rel="stylesheet" href="style.css">
-    <link href="image/Logo.svg" rel="icon">
+    <link href="assets/image/Logo.svg" rel="icon">
 </head>
 
 <body>
     <header>
-        <img src="image/Logo.svg" alt="logo-header">
+        <img src="assets/image/Logo.svg" alt="logo-header">
         <nav>
             <a href="#">About</a>
             <a href="#">Help</a>
@@ -19,7 +21,21 @@
         </nav>
         <div class="demo_btn">
             <p>Request Demo</p>
-            <img src="image/arrow.svg" alt="arrow">
+            <img src="assets/image/arrow.svg" alt="arrow">
+        </div>
+        <input type="checkbox" id="burgerChecker">
+        <label class="burgerMenu" for="burgerChecker">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+        <div class="burgerNav">
+            <nav>
+                <a href="#">About</a>
+                <a href="#">Help</a>
+                <a href="#">Features</a>
+                <a href="#">Signup</a>
+            </nav>
         </div>
     </header>
 
@@ -34,11 +50,11 @@
                 </p>
                 <button class="about__lf_btn">Learn more</button>
             </div>
-            <img src="image/image1 1.png" alt="image1" class="about__lf_img">
+            <img src="assets/image/image1 1.png" alt="image1" class="about__lf_img">
         </section>
 
         <section class="strong__side">
-            <img src="image/image2.png" alt="image2" class="strong__side__img">
+            <img src="assets/image/image2.png" alt="image2" class="strong__side__img">
             <div class="strong__side__txt">
                 <h3 class="strong__side__title">We are a high-level data storage bank</h3>
                 <p class="strong__side__main__txt"> The place to store various data that you can access at any time
@@ -49,7 +65,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="feature__main">
             <div class="feature">
                 <h3 class="feature__title">Features</h3>
                 <p class="feature__txt">Some of the features and advantages that we provide for those of you who
@@ -59,9 +75,9 @@
         </section>
 
         <section class="info__feature">
-            <div class="box__info1">
+            <div class="box__info box__info--greenbg">
                 <!--FISRT PICTURE-->
-                <img src="image/image3 1.png" alt="image3">
+                <img src="assets/image/image3 1.png" alt="image3">
                 <div>
                     <div class="info__txt">
                         <h4>Search Data</h4>
@@ -71,14 +87,14 @@
                     </div>
                     <div class="demo__btn3">
                         <p>Learn more</p>
-                        <img src="image/arrow.svg" alt="arrow">
+                        <img src="assets/image/arrow.svg" alt="arrow">
                     </div>
                 </div>
             </div>
 
-            <div class="box__info2">
+            <div class="box__info box__info--purporbg">
                 <!--SECOND PICTURE-->
-                <img src="image/image4.png" alt="image4">
+                <img src="assets/image/image4.png" alt="image4">
                 <div>
                     <div class="info__txt">
                         <h4>24 Hours Access</h4>
@@ -88,14 +104,14 @@
                     </div>
                     <div class="demo__btn3">
                         <p>Learn more</p>
-                        <img src="image/arrow.svg" alt="arrow">
+                        <img src="assets/image/arrow.svg" alt="arrow">
                     </div>
                 </div>
             </div>
 
-            <div class="box__info3">
+            <div class="box__info box__info--pinkbg">
                 <!--THIRD PICTURE-->
-                <img src="image/image5 1.png" alt="image5">
+                <img src="assets/image/image5 1.png" alt="image5">
                 <div>
                     <div class="info__txt">
                         <h4>Print Out</h4>
@@ -104,14 +120,14 @@
                     </div>
                     <div class="demo__btn3">
                         <p>Learn more</p>
-                        <img src="image/arrow.svg" alt="arrow">
+                        <img src="assets/image/arrow.svg" alt="arrow">
                     </div>
                 </div>
             </div>
 
-            <div class="box__info4">
+            <div class="box__info box__info--bluebg">
                 <!--FORTH PICTURE-->
-                <img src="image/image6 1.png" alt="image6">
+                <img src="assets/image/image6 1.png" alt="image6">
                 <div>
                     <div class="info__txt">
                         <h4>Security Code</h4>
@@ -121,7 +137,7 @@
                     </div>
                     <div class="demo__btn3">
                         <p>Learn more</p>
-                        <img src="image/arrow.svg" alt="arrow">
+                        <img src="assets/image/arrow.svg" alt="arrow">
                     </div>
                 </div>
             </div>
@@ -139,13 +155,13 @@
             <button class="learn__btn">Learn more</button>
             <div class="demo__btn2">
                 <p>Request Demo</p>
-                <img src="image/arrow.svg" alt="arrow">
+                <img src="assets/image/arrow.svg" alt="arrow">
             </div>
         </div>
         <div class="author">
             <p>© Datawarehouse™, 2020. All rights reserved.
                 Company Registration Number: 21479524.</p>
-            <img src="image/Group 64.png" alt="messenger">
+            <img src="assets/image/Group 64.png" alt="messenger">
         </div>
     </footer>
 </body>
