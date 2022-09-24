@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pavlo Turchynyak">
+    <title>Lab 4</title>
+    <link rel="icon" href="./assets/image/photo-camera-interface-symbol-for-button.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>My camera</h1>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <form class="my_form">
+                <h3>Create Camera</h3>
+                <div class="input_data">
+                    <label> Name </label>
+                    <input type="text" id="name_camera">
+                </div>
+                <div class="input_data">
+                    <label> Description </label>
+                    <input type="text" id="info_camera">
+                </div>
+                <button type="submit" id="submit_button"> Submit </button>
+            </form>
+
+            <div class="find_menu">
+                <h3> Find cards </h3>
+                <input id="find_input" type="text" class="form-control">
+                <button id="find_button" type="button"> Find </button>
+                <button id="cancel_find_button" type="button"> Cancel </button>
+            </div>
+
+            <div class="sort_section">
+                <legend><h3>Sort by</h3></legend>
+                <div>
+                    <input type="radio" value="name" id="name" name="property">
+                    <label for="id"> Name </label>
+                </div>
+                <div>
+                    <input type="radio" value="memory" id="memory" name="property">
+                    <label for="memory"> Memory </label>
+                </div>
+                <div>
+                    <input type="radio" value="zoom" id="zoom" name="property">
+                    <label for="zoom"> Zoom </label>
+                </div>
+                <button type="button" id="sort_button">Sort</button>
+            </div>
+            <div>
+                <h3> Count total amount of memory </h3>
+                <p id="count"><p>
+                <button type="button" id="press"> Press</button>      
+            </div>
+        </aside>
+
+        <ul id="items_container"></ul>
+    </main>
+
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
