@@ -29,7 +29,7 @@ sortButton.addEventListener("click", () => {
     let properties = document.getElementsByName("property");
     for (const property of properties) {
         if (property.checked === true) {
-            const sortCamera = arrayOfCamera.sort((a, b) => (a[property.value] > b[property.value]) ? 1 : ((b[property.value] > a[property.value]) ? -1 : 0));
+            const sortCamera = arrayOfCamera.sort((a, b) => (+a[property.value] > +b[property.value]) ? 1 : ((+b[property.value] > +a[property.value]) ? -1 : 0));
             sortCamera.reverse().forEach(addItemToPage)
         }
     }
