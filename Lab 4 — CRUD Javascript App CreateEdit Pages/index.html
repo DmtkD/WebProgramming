@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Pavlo Turchynyak">
+    <title>Lab 4</title>
+    <link rel="icon" href="./assets/image/photo-camera-interface-symbol-for-button.png">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header_main">
+        <span> My app </span>
+        <nav class="nav_page">
+            <li>My Camera</li>
+            <li onclick="document.location.href='./create.html'">Create Camera</li>
+        </nav>
+        <div class="find_menu">
+            <input id="find_input" type="text" class="form-control" placeholder="Type something...">
+            <button id="find_button" type="button" class="btn btn__find_button"> Find </button>
+            <button id="cancel_find_button" type="button" class="btn btn__cancel_find_button"> Cancel </button>
+        </div>
+    </header>
+    <main>
+        <aside>
+            <div class="sort_section">
+                <legend><h3>Sort by</h3></legend>
+                <div>
+                    <input type="radio" value="name" id="name" name="property">
+                    <label for="id"> Name </label>
+                </div>
+                <div>
+                    <input type="radio" value="memory" id="memory" name="property">
+                    <label for="memory"> Memory </label>
+                </div>
+                <div>
+                    <input type="radio" value="zoom" id="zoom" name="property">
+                    <label for="zoom"> Zoom </label>
+                </div>
+                <button type="button" id="sort_button">Sort</button>
+            </div>
+            <div class="count">
+                <h3> Count total amount of memory </h3>
+                <p id="count"><p>
+                <button type="button" id="press"> Press</button>      
+            </div>
+        </aside>
+
+        <ul id="items_container"></ul>
+    </main>
+
+    <script type="module" src="./js/index.js"></script>
+</body>
+
+</html>
