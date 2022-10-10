@@ -1,0 +1,46 @@
+.Footer {
+    padding: 0vh 8vw 5vh 8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Footer div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.FooterText{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 25%;
+}
+
+.FooterText h3 {
+    width: 100%;
+}
+
+.FooterImg {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+}
+
+.Footer div div img {
+    width: 32%;
+}
+
+.Logo {
+    height: 10%;
+    width: 5%;
+    padding-right: 8%;
+}
+
+.Footer hr {
+    width: calc(100vw - 2*8vw);
+    height: 1px;
+    border-radius: 20px;
+    background-color: black;
+}
