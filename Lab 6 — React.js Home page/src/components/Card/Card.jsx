@@ -1,10 +1,13 @@
 import './Card.css';
 
 function Card(props) {
+    const {
+        number
+    } = props
     return (
         <div className='Card'>
-            <img src={require(`../../assert/img/Camera${props.number}.png`)} alt={`img${props.number}`}/>
-            <h2>Tile {props.number} Camera</h2>
+            <img src={require(`../../assert/img/Camera${number}.png`)} alt={`img${number}`} />
+            <h2>Tile {number} Camera</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
         </div>
     )
