@@ -10,7 +10,7 @@ function Footer() {
             <div>
                 <div className='FooterText'>
                     <h3>Camera Company</h3>
-                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo</span>
+                    <span>Our company specializes in selling high-quality cameras that will delight you every day</span>
                 </div>
                 <img src={logo} alt='logo' className='Logo' />
                 <div className='FooterImg'>
@@ -19,7 +19,7 @@ function Footer() {
                     <img src={twitter} alt="twitter" />
                 </div>
             </div>
-            <hr/>
+            <hr />
             <span>2022 IoT © Copyright all rights reserved, Pavlo Turchynyak</span>
         </footer>
     )

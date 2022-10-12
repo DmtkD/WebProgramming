@@ -5,3 +5,7 @@
     text-align: center;
     width: 27%;
 }
+
+.Card img {
+    width: 80%;
+}
