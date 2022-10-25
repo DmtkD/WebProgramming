@@ -1,6 +1,6 @@
 import logo from '../../assert/img/logo.png'
 import {NavLink} from "react-router-dom"
-import './Header.css';
+import './Header.scss';
 
 function Header() {
     return (

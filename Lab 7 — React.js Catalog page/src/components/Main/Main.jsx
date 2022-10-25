@@ -1,6 +1,6 @@
 import Camera from '../../assert/img/MainCamera.webp';
 import Card from '../Card/Card.jsx'
-import './Main.css'
+import './Main.scss'
 
 function Main() {
     return (

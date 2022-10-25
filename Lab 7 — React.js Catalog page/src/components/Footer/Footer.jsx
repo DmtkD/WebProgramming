@@ -2,7 +2,7 @@ import facebook from '../../assert/img/facebook.svg';
 import instagram from '../../assert/img/instagram.svg';
 import twitter from '../../assert/img/twitter.svg';
 import logo from '../../assert/img/logo.png'
-import './Footer.css'
+import './Footer.scss'
 
 function Footer() {
     return (
