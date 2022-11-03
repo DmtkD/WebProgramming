@@ -9,7 +9,7 @@ function Filter({ sendDataToParent }) {
 
     const filterCard = async (event) => {
         event.preventDefault();
-        let findCard = [432423];
+        let findCard;
         let left = parseInt(memoryValue.toString().split(",")[0]);
         let right = parseInt(memoryValue.toString().split(",")[1]);
         if (memoryValue === "Memory" && companyValue === "Company") { findCard = cardItem }
