@@ -2,7 +2,9 @@ import img from "../../assert/img/img.svg";
 import { useNavigate } from "react-router-dom";
 import "./Article.scss";
 
-function Article({ number }) {
+function Article({ number, text }) {
+    
+
     const navigate = useNavigate();
     const navigateItem = () => {
         navigate(`/catalog/${number}`);
@@ -13,7 +15,7 @@ function Article({ number }) {
             <p>Item {number}</p>
             <img src={img} alt={"img"} />
             <div className="textCard">
-                <h2>Amazing stuff</h2>
+                <h2>{text}</h2>
                 <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui </span>
             </div>
             <button onClick={navigateItem}>Viev more</button>
