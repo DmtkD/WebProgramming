@@ -15,7 +15,6 @@ function App() {
     axios.get("http://localhost:8080/cameras").
       then((response) => {
         setCard(response.data);
-        console.log(response.data)
       })
   }, []);
 

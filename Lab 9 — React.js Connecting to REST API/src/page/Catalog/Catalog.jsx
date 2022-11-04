@@ -9,6 +9,7 @@ import { useCurrency } from "../../jsx/Context";
 function Catalog() {
     const [search, searchSet] = useState("");
     const [cardItem, setCardItem] = useState(useCurrency());
+    const [load, setLoad] = useState(true)
 
     const getValue = (event) => {
         searchSet(event.target.value);
@@ -17,6 +18,10 @@ function Catalog() {
     const sendDataToParent = (cardFromChildren) => {
         setCardItem(cardFromChildren)
     }
+
+    useEffect(() => {
+        setInterval(()=> setLoad(false), 2500)
+    }, [])
 
     useEffect(() => {
         function findByName() {
@@ -40,7 +45,8 @@ function Catalog() {
             <input type="text" className="SearchBox" placeholder="🔍" onChange={getValue} />
             <Filter sendDataToParent={sendDataToParent} />
             <main className="articleCard">
-                {cardItem.map((el) => { return <Article key={el.id} number={el.id} text={el.nameOfManufacturer}  /> })}
+                {load && <div className="loader">Loading...</div>}
+                {!load && cardItem.map((el) => { return <Article key={el.id} number={el.id} text={el.nameOfManufacturer}  /> })}
             </main>
         </Fragment>
     );

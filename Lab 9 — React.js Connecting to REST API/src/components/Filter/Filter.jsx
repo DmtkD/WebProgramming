@@ -3,21 +3,21 @@ import { useCurrency } from "../js/Context";
 import "./Filter.scss";
 
 
-function Filter({ sendDataToParent }) {
+function Filter({ sendDataToParent, data }) {
     const [memoryValue, setMemoryValue] = useState("Memory");
     const [companyValue, setCompanyValue] = useState("Company");
-    const [cardItem, setCardItem] = useState(useCurrency());
+    const [card, setCard] = useState(useCurrency());
 
-    const filterCard = async (event) => {
+    const filterCard = (event) => {
         event.preventDefault();
-        let findCard = cardItem;
+        let findCard = card;
         let left = parseInt(memoryValue.toString().split(",")[0]);
         let right = parseInt(memoryValue.toString().split(",")[1]);
-        if (memoryValue === "Memory" && companyValue === "Company") { findCard = cardItem }
-        if (memoryValue !== "Memory" && companyValue === "Company") { findCard = cardItem.filter((el) => el.memoryCapacity >= left && el.memoryCapacity <= right) }
-        if (memoryValue === "Memory" && companyValue !== "Company") { findCard = cardItem.filter((el) => el.nameOfManufacturer === companyValue) }
-        if (memoryValue !== "Memory" && companyValue !== "Company") { findCard = cardItem.filter((el) => el.memoryCapacity >= left && el.memoryCapacity <= right && el.nameOfManufacturer === companyValue) }
-        console.log(cardItem)
+        if (memoryValue === "Memory" && companyValue === "Company") { findCard = card }
+        if (memoryValue !== "Memory" && companyValue === "Company") { findCard = card.filter((el) => el.memoryCapacity >= left && el.memoryCapacity <= right) }
+        if (memoryValue === "Memory" && companyValue !== "Company") { findCard = card.filter((el) => el.nameOfManufacturer === companyValue) }
+        if (memoryValue !== "Memory" && companyValue !== "Company") { findCard = card.filter((el) => el.memoryCapacity >= left && el.memoryCapacity <= right && el.nameOfManufacturer === companyValue) }
+        console.log(card)
         sendDataToParent(findCard);
     }
 
