@@ -1,14 +1,16 @@
 import { Fragment, useState } from "react";
-import { useCurrency } from "../js/Context";
 import "./Filter.scss";
+import axios from "axios";
 
-
-function Filter({ sendDataToParent, data }) {
+function Filter({ sendDataToParent }) {
     const [memoryValue, setMemoryValue] = useState("Memory");
     const [companyValue, setCompanyValue] = useState("Company");
-    const [card, setCard] = useState(useCurrency());
+    const [card, setCard] = useState([]);
 
     const filterCard = (event) => {
+        axios.get("http://localhost:8080/cameras").then((response) => {
+            setCard(response.data)
+        });
         event.preventDefault();
         let findCard = card;
         let left = parseInt(memoryValue.toString().split(",")[0]);
@@ -17,7 +19,6 @@ function Filter({ sendDataToParent, data }) {
         if (memoryValue !== "Memory" && companyValue === "Company") { findCard = card.filter((el) => el.memoryCapacity >= left && el.memoryCapacity <= right) }
         if (memoryValue === "Memory" && companyValue !== "Company") { findCard = card.filter((el) => el.nameOfManufacturer === companyValue) }
         if (memoryValue !== "Memory" && companyValue !== "Company") { findCard = card.filter((el) => el.memoryCapacity >= left && el.memoryCapacity <= right && el.nameOfManufacturer === companyValue) }
-        console.log(card)
         sendDataToParent(findCard);
     }
 
