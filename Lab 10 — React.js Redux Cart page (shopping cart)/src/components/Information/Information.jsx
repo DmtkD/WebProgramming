@@ -1,12 +1,22 @@
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import img from "../../assert/img/img.svg";
+import { useCurrency } from "../../jsx/Context";
+import { addToCart } from "../../store/slice";
 import './Information.scss';
 
 function Information() {
     const navigation = useNavigate();
-
+    const [card, setCard] = useState(useCurrency())
+    const dispatch = useDispatch()
     const goBack = () => {
         navigation(-1)
+    }
+
+    const addElementToCart = () => {
+        let id = parseInt(window.location.pathname.split(/.catalog./)[1]) - 1
+        dispatch(addToCart(card[id]))
     }
 
     return (
@@ -50,7 +60,7 @@ function Information() {
                 <p>Price 432432</p>
                 <div>
                     <button onClick={goBack}>Go Back</button>
-                    <button style={{color: '#FFFFFF', background: '#424242'}}>Add Card</button>
+                    <button style={{ color: '#FFFFFF', background: '#424242' }} onClick={addElementToCart}>Add Card</button>
                 </div>
             </div>
 
