@@ -12,10 +12,22 @@ function Cart() {
         navigation(-1)
     }
 
+    const totalPrice = () => {
+        let total = 0
+        card.map((el) => total += el.price * el.quantity)
+        return total
+    }
+
     return (
         <div className="Cart">
-            {card.map((el) => { return <SellCard key={el.id} count={el.quantity} id={el.id}/> })}
-            <p className="total-price"> Total price</p>
+            {card.map((el) => {
+                return <SellCard
+                    key={el.id}
+                    count={el.quantity}
+                    id={el.id}
+                    price={el.price} />
+            })}
+            <p className="total-price"> Total price: {totalPrice()} $</p>
             <div className="button">
                 <button className="back" onClick={goBack}> Back to Catalog </button>
                 <button className="continue"> Continue</button>

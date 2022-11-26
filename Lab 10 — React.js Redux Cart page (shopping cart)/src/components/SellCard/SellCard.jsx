@@ -3,7 +3,7 @@ import camera from '../../assert/img/img.svg'
 import { useDispatch } from 'react-redux';
 import { decrementQuantity, incrementQuantity } from '../../store/slice';
 
-function SellCard ({count, id}) {
+function SellCard ({count, id, price}) {
     const dispatch = useDispatch()
 
 
@@ -18,7 +18,7 @@ function SellCard ({count, id}) {
                 <p> { count} </p>
                 <span onClick={() => dispatch(decrementQuantity(id))}> - </span>
             </div>
-            <span className='price'> Price $</span>
+            <span className='price'> {price} $</span>
         </div>
     )
 }
